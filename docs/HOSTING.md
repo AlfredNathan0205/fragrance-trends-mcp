@@ -48,6 +48,15 @@ Required environment variables:
 With neither key variable set, tool traffic returns `503 not_provisioned`. This is
 deliberate — an unprovisioned deployment must not serve tools anonymously.
 
+Two **project-level** settings cannot be expressed in `vercel.json` and must be
+checked on first import, because Vercel's auto-detection gets both wrong on a
+monorepo of this shape:
+
+| Setting | Required value | What happens otherwise |
+|---|---|---|
+| Root Directory | `./` | Auto-set to `packages/mcp`, where no `build` script exists |
+| Framework Preset | `Other` | Auto-detected as `Node`, which ignores `outputDirectory` |
+
 Generate a key with `node -e "import('@ftm/api').then(m=>console.log(m.mintKey()))"`.
 Only the SHA-256 hash is retained at runtime; the plaintext exists solely in the
 platform's environment configuration.
@@ -64,6 +73,31 @@ platform's environment configuration.
   }
 }
 ```
+
+## Troubleshooting
+
+**`npm error Missing script: "build"` / `workspace @ftm/mcp` / `location /vercel/path0/packages/mcp`**
+Root Directory is pointing at a workspace package instead of the repository root.
+The `build` script is defined once, at the root, because it drives `tsc -b` across
+all three project references. Set Root Directory to `./`.
+
+**`Error: No entrypoint found in "/vercel/path0"` listing `index.js`, `server.js`, `app.js` …**
+The project is being treated as a standalone Node server. It is not one — it is a
+static root plus a function in `api/`. `vercel.json` now pins `"framework": null`,
+but if the project was imported before that, set Framework Preset to `Other`.
+
+**`503 not_provisioned` from a successful deployment**
+The build is fine; no licensee key is configured. Set `FTM_EVALUATION_KEY` or
+`FTM_HTTP_TENANTS`, then redeploy so the new environment reaches the function.
+
+**`503 licensed_mode_disabled`**
+Working as designed. `FTM_MODE=licensed` is gated until rights-approved adapters
+and persistent stores exist. Use `fixture`.
+
+**`401 unauthorized`**
+The key is missing, malformed, or not one of the provisioned keys. Note that
+changing an environment variable requires a redeploy — the function reads keys at
+cold start.
 
 ## What this deployment is not
 
