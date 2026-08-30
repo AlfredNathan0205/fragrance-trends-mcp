@@ -1,0 +1,210 @@
+{
+  "data": [
+    {
+      "ingredient": {
+        "id": 1,
+        "name": "Pistachio",
+        "description": "Nutty-creamy gourmand note trending massively due to viral food and beauty aesthetics.",
+        "category": "Gourmand",
+        "origin": "Italy"
+      },
+      "mentions": 852500,
+      "growth": 852,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 2,
+        "name": "Strawberry",
+        "description": "Juicy, bright fruit note linked to the 'strawberry girl' TikTok aesthetic.",
+        "category": "Gourmand",
+        "origin": "USA"
+      },
+      "mentions": 158000,
+      "growth": 158,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 3,
+        "name": "Matcha",
+        "description": "Earthy green tea note gaining popularity in lattes and perfumes.",
+        "category": "Gourmand",
+        "origin": "Japan"
+      },
+      "mentions": 173000,
+      "growth": 173,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 4,
+        "name": "Vanilla",
+        "description": "Warm, sweet base note, especially in brown sugar and bourbon variants.",
+        "category": "Gourmand",
+        "origin": "Mexico"
+      },
+      "mentions": 420000,
+      "growth": 125,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 5,
+        "name": "Cinnamon",
+        "description": "Spicy, boozy note central to the viral Lattafa Khamrah fragrance trend.",
+        "category": "Spice",
+        "origin": "Sri Lanka"
+      },
+      "mentions": 310000,
+      "growth": 142,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 6,
+        "name": "Cherry",
+        "description": "Sweet, dark fruit note popular in gourmand blends like Lost Cherry.",
+        "category": "Gourmand",
+        "origin": "France"
+      },
+      "mentions": 245000,
+      "growth": 118,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 7,
+        "name": "Mint",
+        "description": "Fresh, cooling note often paired with biotech ingredients and green profiles.",
+        "category": "Fresh",
+        "origin": "USA"
+      },
+      "mentions": 195000,
+      "growth": 105,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 8,
+        "name": "Basil",
+        "description": "Herbal, green note trending in fresh and biotech-driven compositions.",
+        "category": "Fresh",
+        "origin": "India"
+      },
+      "mentions": 168000,
+      "growth": 98,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 9,
+        "name": "Eucalyptus",
+        "description": "Cool, aromatic note linked to green and wellness-inspired fragrance trends.",
+        "category": "Fresh",
+        "origin": "Australia"
+      },
+      "mentions": 152000,
+      "growth": 92,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 10,
+        "name": "Oud",
+        "description": "Rich, woody note with warm, boozy undertones, highly searched on social.",
+        "category": "Woody",
+        "origin": "Middle East"
+      },
+      "mentions": 280000,
+      "growth": 110,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 11,
+        "name": "Coffee",
+        "description": "Warm, roasted note popular in gourmand blends like Intense Caf.",
+        "category": "Gourmand",
+        "origin": "Brazil"
+      },
+      "mentions": 210000,
+      "growth": 108,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    },
+    {
+      "ingredient": {
+        "id": 12,
+        "name": "Rose",
+        "description": "Floral note often paired with coffee or dark fruit in trending blends.",
+        "category": "Floral",
+        "origin": "Turkey"
+      },
+      "mentions": 185000,
+      "growth": 95,
+      "platform": {
+        "id": 1,
+        "name": "TikTok",
+        "icon": "tiktok",
+        "color": "#ff0050"
+      }
+    }
+  ],
+  "lastRefreshed": "2026-07-07T09:46:36.376Z",
+  "writtenAt": 1783417596376
+}

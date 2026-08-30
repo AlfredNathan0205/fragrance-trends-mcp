@@ -1,0 +1,31 @@
+{
+  "name": "fragrance-trends-mcp",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Licensable fragrance trend intelligence over Model Context Protocol",
+  "workspaces": [
+    "packages/core",
+    "packages/mcp",
+    "packages/api"
+  ],
+  "scripts": {
+    "build": "tsc -b packages/core packages/api packages/mcp && npm run copy:fixtures",
+    "clean": "rm -rf packages/*/dist packages/*/*.tsbuildinfo",
+    "mcp:stdio": "tsx packages/mcp/src/stdio.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "copy:fixtures": "mkdir -p packages/core/dist/fixtures && cp packages/core/src/fixtures/*.json packages/core/dist/fixtures/",
+    "mcp:check": "tsx scripts/mcp-check.ts",
+    "mode:check": "node scripts/mode-check.mjs",
+    "check:commercial": "node scripts/check-commercial-boundary.mjs",
+    "verify": "npm run clean && npm run build && npm run check:commercial && npm run mode:check && npm run smoke && npm run mcp:check"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

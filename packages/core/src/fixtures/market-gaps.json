@@ -1,0 +1,166 @@
+{
+  "data": [
+    {
+      "segment": "Micro-Seasonal Climate-Aligned Scents",
+      "gapScore": 92,
+      "recommendedIngredients": [
+        {
+          "id": 1,
+          "name": "Monsoon Mist (High-Humidity Stable Sillage)",
+          "score": 95
+        },
+        {
+          "id": 2,
+          "name": "Frost Bloom (Cold-Weather Wool/Cashmere Optimized)",
+          "score": 90
+        },
+        {
+          "id": 3,
+          "name": "Urban Haze (Anti-Pollution Shield Technology)",
+          "score": 88
+        }
+      ],
+      "targetDemographics": [
+        {
+          "ageGroup": "18-35",
+          "gender": "Non-binary"
+        },
+        {
+          "ageGroup": "25-40",
+          "gender": "Female"
+        }
+      ],
+      "projectedGrowth": 27
+    },
+    {
+      "segment": "Olfactory Ecosystem Layering Kits",
+      "gapScore": 88,
+      "recommendedIngredients": [
+        {
+          "id": 4,
+          "name": "Coordinated Body Mist (Harmonizing Base)",
+          "score": 92
+        },
+        {
+          "id": 5,
+          "name": "Hair Perfume (Non-Alcoholic, Silk-Enhancing)",
+          "score": 89
+        },
+        {
+          "id": 6,
+          "name": "Linen Spray (Long-Lasting, Fabric-Safe)",
+          "score": 85
+        }
+      ],
+      "targetDemographics": [
+        {
+          "ageGroup": "18-28",
+          "gender": "Female"
+        },
+        {
+          "ageGroup": "22-35",
+          "gender": "Male"
+        }
+      ],
+      "projectedGrowth": 32
+    },
+    {
+      "segment": "Evidence-Based Scent Ritual Kits",
+      "gapScore": 85,
+      "recommendedIngredients": [
+        {
+          "id": 7,
+          "name": "Habit-Stacking Morning Citrus (Focus-Inducing)",
+          "score": 94
+        },
+        {
+          "id": 8,
+          "name": "Calm-Inducing Evening Lavender (Sleep-Ready)",
+          "score": 91
+        },
+        {
+          "id": 9,
+          "name": "Mood-Modulating Midday Bergamot (Energy-Boosting)",
+          "score": 87
+        }
+      ],
+      "targetDemographics": [
+        {
+          "ageGroup": "25-44",
+          "gender": "Non-binary"
+        },
+        {
+          "ageGroup": "30-50",
+          "gender": "Female"
+        }
+      ],
+      "projectedGrowth": 35
+    },
+    {
+      "segment": "Transparent Refill Ecosystems with UX Focus",
+      "gapScore": 82,
+      "recommendedIngredients": [
+        {
+          "id": 10,
+          "name": "Traceable Botanical Base (Clean-Label Certified)",
+          "score": 96
+        },
+        {
+          "id": 11,
+          "name": "Carbon-Neutral Solvent (Eco-Friendly Carrier)",
+          "score": 93
+        },
+        {
+          "id": 12,
+          "name": "Refillable Glass Architecture (UV-Protected)",
+          "score": 90
+        }
+      ],
+      "targetDemographics": [
+        {
+          "ageGroup": "18-44",
+          "gender": "Non-binary"
+        },
+        {
+          "ageGroup": "28-45",
+          "gender": "Female"
+        }
+      ],
+      "projectedGrowth": 29
+    },
+    {
+      "segment": "Regionally Rooted Storytelling Scents",
+      "gapScore": 79,
+      "recommendedIngredients": [
+        {
+          "id": 13,
+          "name": "Local Indigenous Flora (Narrative Authentic)",
+          "score": 95
+        },
+        {
+          "id": 14,
+          "name": "Regulatory-Compliant Botanical Extract (EU/US Safe)",
+          "score": 92
+        },
+        {
+          "id": 15,
+          "name": "Olfactory Literacy Blend (Perfumer-Consumer Bridge)",
+          "score": 88
+        }
+      ],
+      "targetDemographics": [
+        {
+          "ageGroup": "25-40",
+          "gender": "Male"
+        },
+        {
+          "ageGroup": "30-50",
+          "gender": "Non-binary"
+        }
+      ],
+      "projectedGrowth": 24
+    }
+  ],
+  "lastRefreshed": "2026-07-05T18:04:53.733Z",
+  "writtenAt": 1783274693733
+}
