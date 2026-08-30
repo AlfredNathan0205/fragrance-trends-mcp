@@ -109,6 +109,28 @@ export class TenantStore {
     return { tenant, apiKey };
   }
 
+  /**
+   * Registers a licensee against a key that was issued elsewhere — an operator
+   * secret, a provisioning system, a hosting platform's environment variables.
+   * Only the SHA-256 hash is retained, exactly as with `create`.
+   */
+  register(name: string, tier: PlanTier, apiKey: string): Tenant {
+    if (typeof apiKey !== 'string' || apiKey.trim() === '') {
+      throw new UnauthorizedTenant('Cannot register a tenant with an empty API key.');
+    }
+    const tenant: Tenant = {
+      id: randomUUID(),
+      name,
+      tier,
+      quota: { ...PLANS[tier] },
+      keyHash: hashKey(apiKey),
+      active: true,
+      createdAt: new Date().toISOString(),
+    };
+    this.byHash.set(tenant.keyHash, tenant);
+    return tenant;
+  }
+
   /** Constant-time comparison to keep key lookup free of timing signal. */
   authenticate(apiKey: string): Tenant {
     const hash = hashKey(apiKey);

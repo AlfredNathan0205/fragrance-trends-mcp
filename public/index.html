@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Fragrance Trends MCP</title>
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 4rem 1.5rem;
+        background: #0b0d0f;
+        color: #e8e6e3;
+        font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+      }
+      main { max-width: 46rem; margin: 0 auto; }
+      h1 { margin: 0 0 .35rem; font-size: 1.6rem; letter-spacing: -.015em; }
+      .sub { margin: 0 0 2.25rem; color: #9aa0a6; }
+      h2 { margin: 2.25rem 0 .6rem; font-size: .78rem; text-transform: uppercase; letter-spacing: .09em; color: #9aa0a6; font-weight: 600; }
+      pre {
+        margin: 0;
+        padding: 1rem 1.1rem;
+        background: #14181c;
+        border: 1px solid #232a31;
+        border-radius: 8px;
+        overflow-x: auto;
+        font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        color: #cfd6dd;
+      }
+      ul { margin: 0; padding-left: 1.15rem; }
+      li { margin-bottom: .45rem; }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em; background: #14181c; border: 1px solid #232a31; border-radius: 4px; padding: .08em .35em; }
+      .note { margin-top: 2.5rem; padding: 1rem 1.1rem; border-left: 2px solid #6b7280; background: #12161a; border-radius: 0 8px 8px 0; color: #b9c0c7; font-size: .93rem; }
+      footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #232a31; color: #6b7280; font-size: .82rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Fragrance Trends MCP</h1>
+      <p class="sub">A Model Context Protocol server for fragrance trend intelligence. This is a machine endpoint, not a web application.</p>
+
+      <h2>Endpoint</h2>
+      <pre>POST /api/mcp
+Authorization: Bearer &lt;api key&gt;
+Content-Type: application/json</pre>
+
+      <h2>Status</h2>
+      <p style="margin:0"><a href="/api/mcp" style="color:#8ab4f8">GET /api/mcp</a> returns the server mode, tool count and operating caveats.</p>
+
+      <h2>Client configuration</h2>
+      <pre>{
+  "mcpServers": {
+    "fragrance-trends": {
+      "url": "https://&lt;your-deployment&gt;/api/mcp",
+      "headers": { "Authorization": "Bearer &lt;api key&gt;" }
+    }
+  }
+}</pre>
+
+      <h2>What it exposes</h2>
+      <ul>
+        <li>Ten tools spanning trending fragrances and ingredients, regional demand, velocity, lifecycle, emerging signals, market gaps, launches, search and reporting.</li>
+        <li>Every response carries a provenance envelope: sources, observation timestamp, cache staleness, and whether numbers were measured or modelled.</li>
+        <li>An integrity guard rejects fabricated-looking numeric distributions rather than returning them.</li>
+        <li>Per-tenant plan gating, rate limits and cost-unit budgets.</li>
+      </ul>
+
+      <div class="note">
+        <strong>Operating posture.</strong> This deployment serves dated fixture snapshots, not live data, and its metering is per-instance rather than a billing ledger. Licensed live mode fails closed until data resale rights, durable tenant isolation and persistent metering are in place.
+      </div>
+
+      <footer>Proprietary. Owned by Nevodia Tech. All rights reserved.</footer>
+    </main>
+  </body>
+</html>

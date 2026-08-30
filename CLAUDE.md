@@ -20,6 +20,11 @@ Read `docs/ARCHITECTURE.md` and `docs/COMMERCIALIZATION.md` before changing code
    protected by RLS, with cross-tenant tests passing.
 9. Do not add an eleventh MCP tool unless it cannot be expressed as a parameter
    on an existing tool.
+10. Both transports enforce the same gates. The HTTP surface requires an API key
+    for all tool traffic, never serves tools anonymously, and must never become a
+    way to bypass plan gating or the licensed-mode gate.
+11. Do not describe hosted metering or tenancy as production-ready. Metering is
+    per-instance and tenancy is in-memory until both are moved to Postgres.
 
 Run `npm run verify` before proposing or committing a change.
 

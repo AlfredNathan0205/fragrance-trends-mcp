@@ -13,8 +13,21 @@ npm install
 npm run build
 npm run smoke        # full pipeline on real captured snapshots
 npm run mcp:check    # MCP protocol conformance over stdio
-npm run verify       # clean build + commercial boundary + smoke + MCP checks
+npm run http:check   # MCP protocol conformance over Streamable HTTP, with auth
+npm run mcp:http     # local HTTP server; prints endpoint and a minted API key
+npm run verify       # clean build + boundary + mode + smoke + stdio + HTTP checks
 ```
+
+## Two transports
+
+| Transport | Use |
+|---|---|
+| **stdio** | A developer runs it locally as a subprocess of Claude Desktop, Cursor or Claude Code. |
+| **Streamable HTTP** | A remote licensee points an MCP client at one URL with an API key. Deploys as a serverless function; see `docs/HOSTING.md`. |
+
+Both share one server, one pipeline, one guard. Over HTTP, tool traffic requires
+an `Authorization: Bearer` key — there is no anonymous access — and plan gating,
+rate limits and the licensed-mode gate all apply identically.
 
 ## The ten tools
 
@@ -68,8 +81,10 @@ measurements. Caught before it reached a licensee.
 ```
 packages/core   ports · adapters · provenance · guard · pipeline   (0 deps)
 packages/api    tenancy · plans · metering · budget
-packages/mcp    protocol binding · stdio entrypoint
-docs/           ARCHITECTURE.md · EXTRACTION-MAP.md
+packages/mcp    protocol binding · stdio entrypoint · HTTP transport
+api/            Vercel function exposing the HTTP transport at /api/mcp
+public/         static landing page for the deployed endpoint
+docs/           ARCHITECTURE.md · EXTRACTION-MAP.md · HOSTING.md · COMMERCIALIZATION.md
 ```
 
 ## Modes
@@ -82,7 +97,10 @@ docs/           ARCHITECTURE.md · EXTRACTION-MAP.md
 ## Status
 
 Commercial foundation, not yet a hosted data product. Fixture mode is suitable
-for demos and technical evaluation. Before a licensee uses live data: document
+for demos and technical evaluation, over either transport. Hosted metering is
+per-instance rather than a billing ledger, and tenancy is in-memory — both are
+documented in `docs/HOSTING.md` and reported in the endpoint's own status
+payload. Before a licensee uses live data: document
 IP ownership, clear source/vendor rights for the intended use, implement the
 approved live adapters, move tenancy and metering to Postgres, and accumulate
 daily historical snapshots. See `docs/COMMERCIALIZATION.md`.

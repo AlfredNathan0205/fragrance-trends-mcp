@@ -16,9 +16,11 @@
     "smoke": "tsx scripts/smoke.ts",
     "copy:fixtures": "mkdir -p packages/core/dist/fixtures && cp packages/core/src/fixtures/*.json packages/core/dist/fixtures/",
     "mcp:check": "tsx scripts/mcp-check.ts",
+    "http:check": "tsx scripts/http-check.ts",
+    "mcp:http": "tsx scripts/serve-http.ts",
     "mode:check": "node scripts/mode-check.mjs",
     "check:commercial": "node scripts/check-commercial-boundary.mjs",
-    "verify": "npm run clean && npm run build && npm run check:commercial && npm run mode:check && npm run smoke && npm run mcp:check"
+    "verify": "npm run clean && npm run build && npm run check:commercial && npm run mode:check && npm run smoke && npm run mcp:check && npm run http:check"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
